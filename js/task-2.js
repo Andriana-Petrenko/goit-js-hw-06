@@ -5,15 +5,14 @@ class Storage{
   }
   getItems() {
     return this.#items;
-  };
+  }
   addItem(newItem) {
     this.#items.push(newItem);
-  };
+  }
   removeItem(itemToRemove) {
-    if (this.#items.includes(itemToRemove)) {
-      const index = this.#items.indexOf(itemToRemove);
-    this.#items.splice(index,1)
-  } };
+    if (this.#items.indexOf(itemToRemove)!==-1)
+      this.#items.splice(this.#items.indexOf(itemToRemove), 1);
+  }
 }
 
 
